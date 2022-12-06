@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  web:
+    image: ankan0011/web-app
+    restart: always
+    command: npm start
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    environment:
+      DB_CONNECTION_STRING: mongodb://test:test@mongodb/testDB
+
+  database:
+    container_name: mongodb
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: test
+      MONGO_INITDB_ROOT_PASSWORD: test
+      MONGO_INITDB_DATABASE: testDB
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
