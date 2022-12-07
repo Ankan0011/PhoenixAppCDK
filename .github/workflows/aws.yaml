@@ -41,7 +41,8 @@ jobs:
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_APP:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY_APP:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY_APP:$IMAGE_TAG"
-        run: |
+          
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_DB:$IMAGE_TAG ./mongo
           docker push $ECR_REGISTRY/$ECR_REPOSITORY_DB:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY_DB:$IMAGE_TAG"
+          
