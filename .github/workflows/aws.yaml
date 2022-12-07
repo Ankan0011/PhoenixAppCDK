@@ -10,16 +10,16 @@ on:
 env:
   AWS_REGION: eu-central-1   # TODO: update to cluster zone
 
-  jobs:
-    BuildAndPushImageToECR:
-      name: "Build and Push to ECR"
-      runs-on: ubuntu-latest
+jobs:
+  BuildAndPushImageToECR:
+    name: "Build and Push to ECR"
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v2
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-        - name: Configure AWS Credentials
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
