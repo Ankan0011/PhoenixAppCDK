@@ -1,0 +1,226 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "cdk.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "cdk.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "cdk": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://773124578159/eu-central-1",
+      "properties": {
+        "templateFile": "cdk.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::773124578159:role/cdk-hnb659fds-deploy-role-773124578159-eu-central-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::773124578159:role/cdk-hnb659fds-cfn-exec-role-773124578159-eu-central-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-773124578159-eu-central-1/6420f8a520e21509d22348ebc517b0c8c29f44b853a0b9f21b9b2df98b7c487f.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "cdk.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::773124578159:role/cdk-hnb659fds-lookup-role-773124578159-eu-central-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "cdk.assets"
+      ],
+      "metadata": {
+        "/cdk/phoenix-cdk-cluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "phoenixcdkcluster3F57AA3B"
+          }
+        ],
+        "/cdk/mongodb-cdk-td/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mongodbcdktdTaskRole38482524"
+          }
+        ],
+        "/cdk/mongodb-cdk-td/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mongodbcdktd512FDDD0"
+          }
+        ],
+        "/cdk/mongodb-cdk-td/mongodb-cdk-container/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mongodbcdktdmongodbcdkcontainerLogGroup6007FBF1"
+          }
+        ],
+        "/cdk/mongodb-cdk-td/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mongodbcdktdExecutionRole0B74EF1D"
+          }
+        ],
+        "/cdk/mongodb-cdk-td/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mongodbcdktdExecutionRoleDefaultPolicyA45D50D8"
+          }
+        ],
+        "/cdk/mongodb-local/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mongodblocalC05360A6"
+          }
+        ],
+        "/cdk/sg-690269/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "sg6902692125B596"
+          }
+        ],
+        "/cdk/webapp-cdk-td/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webappcdktdTaskRoleEC6D3747"
+          }
+        ],
+        "/cdk/webapp-cdk-td/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webappcdktd762FD6A6"
+          }
+        ],
+        "/cdk/webapp-cdk-td/webapp-cdk-container/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webappcdktdwebappcdkcontainerLogGroup35FE593B"
+          }
+        ],
+        "/cdk/webapp-cdk-td/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webappcdktdExecutionRoleD87D8A9F"
+          }
+        ],
+        "/cdk/webapp-cdk-td/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webappcdktdExecutionRoleDefaultPolicy7E78A396"
+          }
+        ],
+        "/cdk/FargateService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceLBB353E155"
+          }
+        ],
+        "/cdk/FargateService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceLBPublicListener4B4929CA"
+          }
+        ],
+        "/cdk/FargateService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceLBPublicListenerECSGroupBE57E081"
+          }
+        ],
+        "/cdk/FargateService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceLoadBalancerDNS9433D5F6"
+          }
+        ],
+        "/cdk/FargateService/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTaskDefTaskRole8CDCF85E"
+          }
+        ],
+        "/cdk/FargateService/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTaskDef940E3A80"
+          }
+        ],
+        "/cdk/FargateService/TaskDef/web/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTaskDefwebLogGroup71FAF541"
+          }
+        ],
+        "/cdk/FargateService/TaskDef/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTaskDefExecutionRole9194820E"
+          }
+        ],
+        "/cdk/FargateService/TaskDef/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTaskDefExecutionRoleDefaultPolicy827E7CA2"
+          }
+        ],
+        "/cdk/FargateService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceECC8084D"
+          }
+        ],
+        "/cdk/FargateService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceSecurityGroup262B61DD"
+          }
+        ],
+        "/cdk/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LoadBalancerDNS"
+          }
+        ],
+        "/cdk/mongodb-service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mongodbserviceServiceB687B84D"
+          }
+        ],
+        "/cdk/mongodb-service/CloudmapService/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mongodbserviceCloudmapService0688DCD1"
+          }
+        ],
+        "/cdk/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/cdk/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/cdk/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "cdk"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

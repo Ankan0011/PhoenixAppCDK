@@ -1,1 +1,4 @@
 node_modules
+cdk_infra/.venv
+cdk_infra/cdk.context.json
+cdk_infra/stacks/__pycache__

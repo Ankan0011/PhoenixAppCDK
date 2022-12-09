@@ -1,5 +1,4 @@
 # GitHub Actions to manage the continous integration
-
 name: Build and Push to ECR
 
 on:
@@ -41,8 +40,7 @@ jobs:
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_APP:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY_APP:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY_APP:$IMAGE_TAG"
-          
+
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_DB:$IMAGE_TAG ./mongo
           docker push $ECR_REGISTRY/$ECR_REPOSITORY_DB:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY_DB:$IMAGE_TAG"
-          
